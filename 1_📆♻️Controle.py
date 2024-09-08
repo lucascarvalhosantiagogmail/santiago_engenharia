@@ -27,14 +27,14 @@ def imagem(caminho):
 # CONFIGURAÇÃO DA PÁGINA
 st.set_page_config(
 page_title="Plataforma Santiago Engenharia",
-page_icon= imagem(r"C:\Users\User\Desktop\Meioambiente\Python\Santiago.png"),
+page_icon= imagem(r"C:\Users\User\Desktop\GitHub\santiago_engenharia\Santiago.png"),
 layout="wide"
 )
 
 # TÍTULO DA PÁGINA
 st.title("CONTROLE DE LICENÇAS")
 st.header("Empresa: Engenharia LTDA")
-st.logo(r"C:\Users\User\Desktop\Meioambiente\Python\Santiago.png")
+st.logo(r"C:\Users\User\Desktop\GitHub\santiago_engenharia\Santiago.png")
 
 # DESCRITIVO INICIAL
 st.subheader("Número de Licenças: 2")
