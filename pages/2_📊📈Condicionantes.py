@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 import webbrowser
-import matplotlib.image as mpimg
 import plotly.express as px 
 import plotly.graph_objects as go
 
