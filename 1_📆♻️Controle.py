@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 import webbrowser
-import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import plotly.express as px 
 
@@ -18,12 +17,6 @@ if "data" not in st.session_state:
 else:
     df_data = st.session_state["data"]
 
-# FUNÇÃO QUE DEFINE A PARA A LOGO
-def imagem(caminho):
-    img = mpimg.imread(caminho)
-    plt.axis("off")
-    plt.imshow(img)
-
 # CONFIGURAÇÃO DA PÁGINA
 st.set_page_config(
 page_title="Plataforma Santiago Engenharia",
@@ -34,7 +27,7 @@ layout="wide"
 # TÍTULO DA PÁGINA
 st.title("CONTROLE DE LICENÇAS")
 st.header("Empresa: Engenharia LTDA")
-st.logo(r"https://img1.wsimg.com/isteam/ip/0cdba6f5-2fc0-4aaf-b030-d8df637187a2/blob-46e0c21.png/:/rs=w:134,h:100,cg:true,m/cr=w:134,h:100/qt=q:100/ll")
+st.logo("https://img1.wsimg.com/isteam/ip/0cdba6f5-2fc0-4aaf-b030-d8df637187a2/blob-46e0c21.png/:/rs=w:134,h:100,cg:true,m/cr=w:134,h:100/qt=q:100/ll")
 
 # DESCRITIVO INICIAL
 st.subheader("Número de Licenças: 2")
