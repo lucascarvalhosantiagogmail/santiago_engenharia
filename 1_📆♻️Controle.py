@@ -27,14 +27,14 @@ def imagem(caminho):
 # CONFIGURAÇÃO DA PÁGINA
 st.set_page_config(
 page_title="Plataforma Santiago Engenharia",
-page_icon= imagem(r"C:\Users\User\Desktop\GitHub\santiago_engenharia\Santiago.png"),
+page_icon= imagem(r"https://img1.wsimg.com/isteam/ip/0cdba6f5-2fc0-4aaf-b030-d8df637187a2/blob-46e0c21.png/:/rs=w:134,h:100,cg:true,m/cr=w:134,h:100/qt=q:100/ll"),
 layout="wide"
 )
 
 # TÍTULO DA PÁGINA
 st.title("CONTROLE DE LICENÇAS")
 st.header("Empresa: Engenharia LTDA")
-st.logo(r"C:\Users\User\Desktop\GitHub\santiago_engenharia\Santiago.png")
+st.logo(r"https://img1.wsimg.com/isteam/ip/0cdba6f5-2fc0-4aaf-b030-d8df637187a2/blob-46e0c21.png/:/rs=w:134,h:100,cg:true,m/cr=w:134,h:100/qt=q:100/ll")
 
 # DESCRITIVO INICIAL
 st.subheader("Número de Licenças: 2")
