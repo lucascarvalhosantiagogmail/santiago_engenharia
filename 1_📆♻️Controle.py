@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import plotly.express as px 
 import plotly.graph_objects as go
+from pathlib import Path
+
+path = Path(__file__).parent
 
 # FUNÇÃO QUE DEFINE A PARA A LOGO
 def imagem(caminho):
@@ -15,7 +18,7 @@ def imagem(caminho):
 # CARREGAR OS DADOS DA PLANILHA
 
 if "data" not in st.session_state:
-    all_sheets = pd.read_excel("dataset\Planilha.xlsx", sheet_name=None)
+    all_sheets = pd.read_excel(path / "dataset"/ "Planilha.xlsx", sheet_name=None)
     df_data = pd.concat(all_sheets.values(), ignore_index=True, join="outer")
     df_data["Licença-Data de validade"] = pd.to_datetime(df_data["Licença-Data de validade"])
     st.session_state["data"] = df_data
