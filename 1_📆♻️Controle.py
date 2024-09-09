@@ -59,11 +59,14 @@ else:
     st.header("Licença L-5678")
 
 if not df_filtrado.empty:
-    col1, col2, col3, col4, col5 = st.columns(5)
+    col1, col2 = st.columns(2)
     col1.metric(label="Data de emissão da licença:", value=df_filtrado["Licença-Data de emissão"].iloc[0].strftime("%d/%m/%Y"))
     col2.metric(label="Data da validade da licença:", value=df_filtrado["Licença-Data de validade"].iloc[0].strftime("%d/%m/%Y"))
-    col3.metric(label="Dias para vencimento:", value=int(df_filtrado["Dias restantes"].iloc[0]))
-    col4.metric(label="Status:", value=df_filtrado["Status da licença"].iloc[0])
+    
+    col1, col2 = st.columns(2)
+
+    col1.metric(label="Dias para vencimento:", value=int(df_filtrado["Dias restantes"].iloc[0]))
+    col2.metric(label="Status:", value=df_filtrado["Status da licença"].iloc[0])
 else:
     st.warning("Não há licença para a condição selecionada.")
 
