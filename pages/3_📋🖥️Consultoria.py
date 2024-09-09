@@ -52,7 +52,7 @@ caminho_imagens = path / "dataset" / "Imagens"
 
 def exibir_imagens(data_visita):
     for i in range(1, 5):  # Supondo que você tenha 4 imagens por visita
-        imagem_path = caminho_imagens / f"{data_visita}_imagem{i}.jpg"  # Ajuste a extensão conforme necessário
+        imagem_path = caminho_imagens / f"{data_visita}_Imagem{i}.jpg"  # Ajuste a extensão conforme necessário
         if imagem_path.exists():
             imagem = Image.open(imagem_path)
             st.image(imagem, caption=f"Imagem {i} - {data_visita}", use_column_width=True)
