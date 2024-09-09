@@ -9,6 +9,8 @@ import plotly.graph_objects as go
 from pathlib import Path
 from PIL import Image
 
+
+
 # CONFIGURAÇÃO DA PÁGINA
 st.set_page_config(
 page_title="Plataforma Santiago Engenharia",

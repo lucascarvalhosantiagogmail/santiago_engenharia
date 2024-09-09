@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import plotly.express as px 
 import plotly.graph_objects as go
+from pathlib import Path
+
+path = Path(__file__).parent.parent
 
 # FUNÇÃO QUE DEFINE A PARA A LOGO
 def imagem(caminho):
