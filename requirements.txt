@@ -66,6 +66,7 @@ smmap==5.0.1
 stack-data==0.6.3
 statsmodels==0.14.2
 streamlit==1.37.1
+streamlit-option-menu==0.3.13
 tenacity==8.5.0
 toml==0.10.2
 tornado==6.4.1
