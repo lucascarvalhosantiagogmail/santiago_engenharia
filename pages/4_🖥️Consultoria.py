@@ -16,6 +16,23 @@ st.set_page_config(
     layout="wide")
 st.logo("https://img1.wsimg.com/isteam/ip/0cdba6f5-2fc0-4aaf-b030-d8df637187a2/blob-46e0c21.png/:/rs=w:134,h:100,cg:true,m/cr=w:134,h:100/qt=q:100/ll")
 
+# Atualização da página a cada 5 minutos. Não permitir a hibernação.
+keep_alive_script = """
+<script>
+    function keepAlive() {
+        setInterval(function() {
+            console.log("Sending keep-alive ping...");
+            fetch("/").then(response => {
+                console.log("Ping response: ", response);
+            });
+        }, 300000); // A cada 5 minutos
+    }
+    document.addEventListener('DOMContentLoaded', keepAlive);
+</script>
+"""
+
+st.components.v1.html(keep_alive_script, height=0)
+
 #CONTROLE DE LOGIN
 
 if not st.session_state.get("logged_in", False):
